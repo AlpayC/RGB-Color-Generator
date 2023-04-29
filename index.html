@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassList</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <form>
+      <h1>RGB COLOR GENERATOR</h1>
+      <h2>Die Hintergrundfarbe ist:</h2>
+      <div class="outputcontainer">
+        <p class="output" id="rgbcode">rgb(77, 192, 156)</p>
+        <button class="btncopy" onclick="copyToClipboard()">
+          <!-- <img src="./assets/img/copy-icon.png" alt="" /> -->
+        </button>
+      </div>
+      <label for="red">Red</label>
+      <input
+        onchange="changeBackground();return false"
+        type="range"
+        name="red"
+        id="redslider"
+        step="1"
+        min="0"
+        max="255"
+        value="77"
+      />
+      <label for="green">Green</label>
+      <input
+        onchange="changeBackground();return false"
+        type="range"
+        name="green"
+        id="greenslider"
+        step="1"
+        min="0"
+        max="255"
+        value="192"
+      />
+      <label for="blue">Blue</label>
+      <input
+        onchange="changeBackground();return false"
+        type="range"
+        name="blue"
+        id="blueslider"
+        step="1"
+        min="0"
+        max="255"
+        value="156"
+      />
+      <h2>Zufällige Farben mit der Taste "Enter"</h2>
+    </form>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
